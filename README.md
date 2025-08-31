@@ -67,13 +67,19 @@ olist-sql-dwh/
 
 ### 🥇 Gold Layer **Star Schema**
 
-* Aggregated views for KPI dashboards
-* Examples:
-
-  * Sales by product category
-  * Orders by state and month
-  * Average delivery time by region
-  * Payment method breakdown
+* Dimension Tables
+    - dim_customer
+    - dim_product
+    - dim_seller
+    - dim_payment
+    - dim_review
+    - dim_order
+    - dim_geolocation
+* Fact Tables
+    - fact_orders (order-level metrics)
+    - fact_order_items (item-level metrics)
+    - fact_payments (payment transactions)    
+    - fact_reviews (review metrics)
 * Script:
 
   * `Query_for_gold_layer.sql`
