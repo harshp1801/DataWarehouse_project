@@ -13,7 +13,7 @@ The warehouse supports KPI dashboards and business insights for e-commerce opera
 ```
 olist-sql-dwh/
 │── README.md                # Documentation for GitHub
-│── Schema_Architecture                  # Any ER diagrams, architecture images, notes
+│── Schema_Architecture      # Any ER diagrams, architecture images, notes
 │   ├── Bronze_schema.jpg
 │   ├── Silver_schema.jpg
 │   └── star_schema.png
@@ -41,20 +41,6 @@ olist-sql-dwh/
 * **Data**: [Olist Brazilian E-commerce Dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 * **Analytics**: KPI queries and dashboards (Power BI / Tableau compatible)
 
----
-
-## 📂 Repository Structure
-
-```
-olist-sql-dwh/
-│── README.md                # Documentation
-│── /Schema_architecture/    # Diagrams, notes
-│── /Bronze/                 # Raw schema + SPs
-│── /Silver/                 # Star schema + SPs
-│── /Gold/                   # KPI Views
-│── /Validation/             # Ad-hoc queries
-│── Database_and_Schema_Creation.sql # Creates Database and Schema
-```
 
 ---
 
