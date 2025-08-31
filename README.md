@@ -8,28 +8,27 @@ The warehouse supports KPI dashboards and business insights for e-commerce opera
 
 ---
 
-# 📂 Folder Structure
+# 📂 Repository Structure
 
 ```
 olist-sql-dwh/
 │── README.md                # Documentation for GitHub
-│── /docs/                   # Any ER diagrams, architecture images, notes
+│── Schema_Architecture                  # Any ER diagrams, architecture images, notes
+│   ├── Bronze_schema.jpg
+│   ├── Silver_schema.jpg
 │   └── star_schema.png
-│── /bronze/                 # Raw schema + stored procs
-│   ├── bronze_schema_creation.sql
-│   ├── stored_procedure_for_bronze.sql
-│   └── table_analysis.sql   # profiling raw data
-│── /silver/                 # Star schema + stored procs
-│   ├── silver_schema_creation.sql
-│   ├── silver_layer_creation.sql
-│   ├── stored_procedure_for_silver.sql
-│── /gold/                   # Aggregates, views, KPIs
-│   └── Query_for_gold_layer.sql
-│── /analysis/               # Analysis + dashboards
-│   ├── analysis_v1.sql
-│   └── table_analysis.sql
-│── /setup/                  # Database setup scripts
-│   └── SQLQuery_to_create_database.sql
+│── Bronze                 # Raw schema + stored procs
+│   ├── Bronze_Layer_Creation_query.sql
+│   ├── Bronze_Layer_Stored_Procedure.sql
+│── Silver                 # Star schema + stored procs
+│   ├── Silver_Layer_Creation_query.sql
+│   ├── Silver_Layer_Stored_Procedure.sql
+│── Gold                   # Aggregates, views, KPIs
+│   └── Gold_Layer_Query.sql
+│── Validation              # Analysis + dashboards
+│   ├── Bronze_Layer_Validation.sql
+│   └── Silver_Layer_Validation.sql
+│── SQLQuery_to_create_database.sql   # Database and Schema setup scripts    
 ```
 
 ---
@@ -41,17 +40,6 @@ olist-sql-dwh/
 * **Modeling**: Star Schema (Fact + Dimension tables)
 * **Data**: [Olist Brazilian E-commerce Dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 * **Analytics**: KPI queries and dashboards (Power BI / Tableau compatible)
-
----
-
-## 🏗️ Project Architecture
-
-```mermaid
-graph TD
-  A[Bronze Layer: Raw Data] --> B[Silver Layer: Star Schema]
-  B --> C[Gold Layer: Aggregated KPIs]
-  C --> D[Dashboards & Reports]
-```
 
 ---
 
