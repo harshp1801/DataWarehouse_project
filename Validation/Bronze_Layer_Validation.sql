@@ -74,7 +74,7 @@ print '=========================================================================
 select top(100) * from bronze.orders_orderitem 
 -- at some places we have "" at start and end of order_id and produt_id and seller_id need to take care of that also trim the string data if needed
 select order_item_id,count(*) from bronze.orders_orderitem
-group by order_id
+group by order_item_id
 having count(*)>1
 -- it is observed that the order_item is repeated here the repetation of order_item_id tells how many quantity of the product was bought by customer 
 select * from bronze.orders_orderitem

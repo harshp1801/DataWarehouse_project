@@ -192,21 +192,3 @@ Begin
             print '=======================================================================================================================';
         End CATCH
 END
-
--- alter table Bronze.orders_orderreviews
--- alter column review_score nvarchar(10);
-/*
-alter table Bronze.orders_orderreviews
-alter column review_answer_timestamp datetime2;
-GO
-alter table Bronze.orders_orderreviews
-alter column review_creation_date datetime2;
-GO
-*/
--- alter table Bronze.sellers_main
--- alter column seller_zip_code_prefix nvarchar(50);
--- select * from Bronze.orders_orderitem
--- select * from Bronze.orders_main
--- alter table Bronze.geo_locationinfo
--- alter column geolocation_zip_code_prefix nvarchar(50);
--- select * from Bronze.geo_locationinfo;
